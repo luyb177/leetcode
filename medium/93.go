@@ -1,10 +1,5 @@
 package main
 
-import (
-	"strconv"
-	"strings"
-)
-
 //
 ////func main() {}
 //var path string
@@ -99,52 +94,52 @@ import (
 //	}
 //	return a
 //}
-
-var path []string
-var res []string
-
-func restoreIpAddresses(s string) []string {
-	path = []string{}
-	res = []string{}
-
-	backTracking(s, 0, 0)
-	return res
-}
-
-func backTracking(s string, startIndex int, segment int) {
-	// 分成4段，且字符用完了
-	if segment == 4 {
-		// 这里是多进入一次递归，让segment == 4 的时候，startIndex == len(s) 了
-		if startIndex == len(s) {
-			res = append(res, strings.Join(path, "."))
-		}
-		return
-	}
-
-	// 让剩余的字符数满足剩余的段数，每段至少1个字符，最多3个字符
-	remainSegment := 4 - segment
-	remainChars := len(s) - startIndex
-	if remainChars < remainSegment || remainChars > remainSegment*3 {
-		return
-	}
-
-	// 同理 截取字符串s[startIndex:i+1]
-	for i := startIndex; i < startIndex+3 && i < len(s); i++ {
-		str := s[startIndex : i+1]
-
-		// 不能有前导0，0除外
-		if len(str) > 1 && str[0] == '0' {
-			break
-		}
-
-		// 不能大于255
-		num, _ := strconv.Atoi(str)
-		if num > 255 {
-			break
-		}
-
-		path = append(path, str)
-		backTracking(s, i+1, segment+1)
-		path = path[:len(path)-1]
-	}
-}
+//
+//var path []string
+//var res []string
+//
+//func restoreIpAddresses(s string) []string {
+//	path = []string{}
+//	res = []string{}
+//
+//	backTracking(s, 0, 0)
+//	return res
+//}
+//
+//func backTracking(s string, startIndex int, segment int) {
+//	// 分成4段，且字符用完了
+//	if segment == 4 {
+//		// 这里是多进入一次递归，让segment == 4 的时候，startIndex == len(s) 了
+//		if startIndex == len(s) {
+//			res = append(res, strings.Join(path, "."))
+//		}
+//		return
+//	}
+//
+//	// 让剩余的字符数满足剩余的段数，每段至少1个字符，最多3个字符
+//	remainSegment := 4 - segment
+//	remainChars := len(s) - startIndex
+//	if remainChars < remainSegment || remainChars > remainSegment*3 {
+//		return
+//	}
+//
+//	// 同理 截取字符串s[startIndex:i+1]
+//	for i := startIndex; i < startIndex+3 && i < len(s); i++ {
+//		str := s[startIndex : i+1]
+//
+//		// 不能有前导0，0除外
+//		if len(str) > 1 && str[0] == '0' {
+//			break
+//		}
+//
+//		// 不能大于255
+//		num, _ := strconv.Atoi(str)
+//		if num > 255 {
+//			break
+//		}
+//
+//		path = append(path, str)
+//		backTracking(s, i+1, segment+1)
+//		path = path[:len(path)-1]
+//	}
+//}
