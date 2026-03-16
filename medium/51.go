@@ -1,6 +1,6 @@
 package main
 
-//func main() {}
+// func main() {}
 var res [][]string
 
 func solveNQueens(n int) [][]string {
