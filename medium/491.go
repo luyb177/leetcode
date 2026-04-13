@@ -1,10 +1,8 @@
 package main
 
-import "fmt"
-
-func main() {
-	fmt.Println(findSubsequences([]int{4, 6, 7, 7}))
-}
+//func main() {
+//	fmt.Println(findSubsequences([]int{4, 6, 7, 7}))
+//}
 
 var path []int
 var res [][]int
