@@ -28,10 +28,11 @@ func mySqrt(x int) int {
 	}
 	return upper
 }
-func abs(a int) int {
-	if a < 0 {
-		return -a
-	} else {
-		return a
-	}
-}
+
+//func abs(a int) int {
+//	if a < 0 {
+//		return -a
+//	} else {
+//		return a
+//	}
+//}

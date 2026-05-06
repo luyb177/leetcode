@@ -1,19 +1,19 @@
 package main
 
-import "strconv"
+//import "strconv"
 
 // func main() {
 //
 // }
-func binaryTreePaths(root *TreeNode) []string {
-	var res = []string{}
-	var path = []int{}
-	if root == nil {
-		return res
-	}
-	traversal(root, &path, &res)
-	return res
-}
+//func binaryTreePaths(root *TreeNode) []string {
+//	var res = []string{}
+//	var path = []int{}
+//	if root == nil {
+//		return res
+//	}
+//	traversal(root, &path, &res)
+//	return res
+//}
 
 //
 //// 前序遍历
