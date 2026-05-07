@@ -1,8 +1,8 @@
 package main
 
-func main() {
-	// fmt.Println(lemonadeChange([]int{5, 5, 5, 10, 20}))
-}
+//func main() {
+//	// fmt.Println(lemonadeChange([]int{5, 5, 5, 10, 20}))
+//}
 
 //func lemonadeChange(bills []int) bool {
 //	m := make(map[int]int)
