@@ -1,10 +1,8 @@
 package main
 
-import "fmt"
-
-func main() {
-	fmt.Println(partitionLabels("ababcbacadefegdehijhklij"))
-}
+//func main() {
+//	fmt.Println(partitionLabels("ababcbacadefegdehijhklij"))
+//}
 
 // Note: 这种获取每一个字符的最远出现索引，并判断当前字符串所拥有的最远出现索引
 // 更快捷
