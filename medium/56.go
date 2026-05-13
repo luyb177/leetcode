@@ -1,13 +1,13 @@
 package main
 
 import (
-	"fmt"
 	"sort"
 )
 
-func main() {
-	fmt.Println(merge([][]int{{1, 3}, {2, 6}, {8, 10}, {15, 18}}))
-}
+//
+//func main() {
+//	fmt.Println(merge([][]int{{1, 3}, {2, 6}, {8, 10}, {15, 18}}))
+//}
 
 // Note：
 // 这里有两个要点就是，
